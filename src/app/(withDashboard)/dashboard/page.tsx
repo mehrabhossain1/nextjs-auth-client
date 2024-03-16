@@ -17,7 +17,10 @@ const DashboardPage = async () => {
             Logged in user email: {session?.user?.email}
           </h1>
           <Image
-            src={session?.user?.image as string}
+            src={
+              session?.user?.image ||
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPMhCJ4qi8Nv5NjUvahzdrOHKl4qdDWayoBR0pyamBQ&s"
+            }
             className="rounded-full mx-auto my-5"
             width={200}
             height={200}
