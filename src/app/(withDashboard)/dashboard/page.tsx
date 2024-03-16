@@ -8,7 +8,7 @@ const DashboardPage = async () => {
 
   return (
     <div>
-      {session?.user && (
+      {session?.user ? (
         <>
           <h1 className="text-4xl text-center mt-10">
             Welcome {session?.user?.name}
@@ -24,6 +24,8 @@ const DashboardPage = async () => {
             alt="user profile"
           />
         </>
+      ) : (
+        <h1 className="text-4xl text-center mt-10">Not logged in</h1>
       )}
     </div>
   );
